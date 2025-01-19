@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link ref  = "stylesheet" href = "styles.css"/>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium sed veritatis consequatur illo, corrupti voluptate ipsam. Fuga, commodi asperiores illo quae quia saepe alias maiores sequi dolorum rem cupiditate voluptatem!
+    <h1>{{name}}</h1>
+    <h1>{{l1}}</h1>
+    <ol>
+        {%for i in l1%}
+        <li>{{i}}</li>
+        {%endfor%}
+    </ol>
+    {%if name in l1%}
+        <p>we found him<p>
+    {%else%}
+        <p>Not found<p>
+    {%endif%}
 </body>
 </html>
