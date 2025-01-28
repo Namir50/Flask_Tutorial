@@ -1,16 +1,15 @@
-
-{% extends "nav.html" %}
-{%block title %}Friends Page
-
+{% extends "nav.html"%}
+{%block content%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/styles2.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>{{name}}</h1>
+    <h4>Thiis is friends page<h4>
 </body>
 </html>
+{%endblock%}

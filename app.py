@@ -10,7 +10,7 @@ def main():
     
 @app.route("/friend")
 def friend():
-    return "This is friends page"
+    return render_template('index4.html')
 
 @app.route("/friends/<name>")
 def friends(name):
@@ -20,7 +20,7 @@ def friends(name):
 def hello():
     l2 = ["My","Name","is","Namir"]
     return render_template('index3.html',l2 = l2)
-        
+
 
 if __name__ == '__main__':
     app.run(debug=True)

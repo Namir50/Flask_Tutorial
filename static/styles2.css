@@ -1,3 +1,9 @@
 body{
     background-color: rgb(130, 30, 223);
 }
+
+li{
+    color : white;
+    font-size:  30px;
+    margin-left: 10px;
+}
