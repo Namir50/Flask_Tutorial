@@ -9,6 +9,11 @@ body {
     padding: 20px; /* Add some padding around the content */
 }
 
-h1, p, h4 {
+h4,h3{
     font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+a{
+    font-size: 18px;
 }

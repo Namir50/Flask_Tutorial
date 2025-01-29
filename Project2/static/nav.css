@@ -8,48 +8,49 @@
 /* Navbar Styling */
 #topnav {
    width: 100%;
-   background-color: #000000; /* Dark background */
+   background-color: #000000; /* Black background */
    display: flex;
-   justify-content: space-around; /* Distribute nav items */
+   justify-content: space-around; /* Distribute nav items evenly */
    align-items: center;
-   padding: 10px 0;
+   padding: 15px 0; /* Add some padding */
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 1000; /* Make sure navbar is on top of all other elements */
+   z-index: 1000; /* Ensure navbar stays on top */
    font-family: Arial, sans-serif;
    font-size: 16px;
 }
 
-#topnav a.nav-link {
-   color: white !important; /* Ensure text is white and override other styles */
-   text-decoration: none;
-   padding: 10px 20px;
-   border-radius: 5px;
-   transition: background-color 0.3s ease, padding 0.3s ease;
+/* Navbar Links Styling */
+#topnav a {
+   color: white; /* White text */
+   text-decoration: none; /* Remove underline */
+   padding: 10px 20px; /* Padding around the text */
+   border-radius: 5px; /* Rounded corners */
+   transition: background-color 0.3s ease; /* Smooth background color change */
 }
 
-#topnav a.nav-link:hover {
-   background-color: #555; /* Change the background on hover */
-   padding: 10px 25px; /* Slightly increase padding on hover */
+/* Hover effect for the links */
+#topnav a:hover {
+   background-color: #555; /* Darken the background when hovered */
 }
 
-/* Ensure the page content doesn't overlap the navbar */
+/* Prevent content from overlapping the navbar */
 body {
-   margin-top: 60px; /* Adjust this depending on navbar height */
+   margin-top: 60px; /* Adjust this value based on your navbar height */
 }
 
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
    #topnav {
-       flex-direction: column; /* Stack navbar items vertically on small screens */
+       flex-direction: column; /* Stack navbar items vertically */
        align-items: center;
    }
 
-   .nav-link {
+   #topnav a {
        width: 80%; /* Make links fill available width */
-       text-align: center; /* Center text inside links */
-       margin: 5px 0;
-       font-size: 18px;
+       text-align: center; /* Center-align text inside links */
+       margin: 5px 0; /* Add spacing between links */
+       font-size: 18px; /* Adjust font size for small screens */
    }
 }
