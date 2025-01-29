@@ -1,0 +1,14 @@
+/* Adjust content to avoid being hidden behind the fixed navbar */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    margin-top: 70px; /* Push the content below the fixed navbar */
+    padding: 20px; /* Add some padding around the content */
+}
+
+h1, p, h4 {
+    font-family: Arial, sans-serif;
+}

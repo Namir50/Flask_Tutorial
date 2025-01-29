@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Website{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='stylesmain.css')}}">
+    <!-- Link to nav.css inside static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
 </head>
 <body>
-    <div class="topnav">
-        <a href="{{ url_for('main') }}">Home</a>
-        <a href="{{ url_for('friend') }}">Friend</a>
-        <a href="{{ url_for('hello') }}">Hello</a>
-    </div>
-    
-    <div class="content">
-        {% block content %}
-        {% endblock %}
+    <nav id="topnav">
+        <a href="{{ url_for('home') }}">Home Page</a>
+        <a href="{{ url_for('friends') }}">Friends Page</a>
+        <a href="{{url_for('about')}}">About Me</a>
+    </nav>
+
+    <div id="content">
+        {% block content %}{% endblock %}
     </div>
 </body>
 </html>

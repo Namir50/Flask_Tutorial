@@ -1,0 +1,8 @@
+{%extends "nav.html"%}
+{%block content%}
+<header>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</header>
+<h4>Hello friend!</h4>
+<a href ="{{url_for('home')}}">Home Page</a>
+{%endblock%}

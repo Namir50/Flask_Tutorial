@@ -1,0 +1,10 @@
+{% extends "nav.html" %}
+
+{% block content %}
+    <header>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </header>
+
+    <h4>Namir</h4>
+    <a href = "{{url_for('friends')}}">Friends</a>
+{% endblock %}
