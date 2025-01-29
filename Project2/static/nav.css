@@ -17,29 +17,21 @@
    top: 0;
    left: 0;
    z-index: 1000; /* Make sure navbar is on top of all other elements */
-   color: white;
    font-family: Arial, sans-serif;
    font-size: 16px;
 }
 
-.nav-link {
-   color: white; /* Ensure links are visible */
+#topnav a.nav-link {
+   color: white !important; /* Ensure text is white and override other styles */
    text-decoration: none;
    padding: 10px 20px;
    border-radius: 5px;
    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-.nav-link:hover {
+#topnav a.nav-link:hover {
    background-color: #555; /* Change the background on hover */
    padding: 10px 25px; /* Slightly increase padding on hover */
-}
-
-/* About link - specific position */
-
-
-#about:hover {
-   background-color: #666;
 }
 
 /* Ensure the page content doesn't overlap the navbar */
