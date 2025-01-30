@@ -15,8 +15,7 @@ def about():
     if request.method == 'POST':
         name = request.form.get('name')
         password = request.form.get('password')
-        return f"Received Name: {name}, Password: {password}"
-    return render_template('index3.html')
+    return render_template('index3.html',name = name, password = password)
 
 if __name__ == '__main__':
     app.run(debug=True)
