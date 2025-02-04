@@ -1,12 +1,19 @@
-{%extends "nav.html"%}
-{%block content%}
-<html>
-    <header>
-        <link rel ='stylesheet' href = "{{url_for('static',filename='styles.css')}}">
-    </header>
-    <body>
-        <h3>Name: {{name}}</h3>
-        <h4>Password: {{password}}</h4>
-    </body>
-</html>
-{%endblock%}
+{% extends "nav.html" %}
+
+{% block content %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <h2>About Page</h2>
+
+    {% if name %}
+        <h3>Name: {{ name }}</h3>
+    {% else %}
+        <h3>Name: No data submitted</h3>
+    {% endif %}
+
+    {% if password %}
+        <h4>Password: {{ password }}</h4>
+    {% else %}
+        <h4>Password: No data submitted</h4>
+    {% endif %}
+{% endblock %}

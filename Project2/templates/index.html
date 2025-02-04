@@ -4,18 +4,27 @@
     <header>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     </header>
+    <h2>Register User</h2>
 
-    <form action="{{url_for('about')}}" method = "post">
-    <label for = "name">name</label>
-    <input type ="text" name  = "name" required>
-    <br>
+    <!-- FORM TO ADD USER -->
+    <form action="{{ url_for('home') }}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
 
-    <label for = "password">password</label>
-    <input type = "password" name = "password" required>
-    <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
 
-    <input type = "submit" value = "submit">
+        <button type="submit">Submit</button>
     </form>
 
-    <a href = "{{url_for('friends')}}">Friends</a>
+    <hr>
+
+    <h3>Stored Users</h3>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.name }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
